@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LPV-uA-IDi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-564" y="-32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KyE-f7-1D9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LPV-uA-IDi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YQL-2d-4ba">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HZI-NO-Ncm" kind="relationship" relationship="rootViewController" id="Qh2-9H-oyM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlA-ce-1dB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="116"/>
+        </scene>
+        <!--小米手环-->
+        <scene sceneID="Lsq-Ax-gg9">
+            <objects>
+                <viewController id="HZI-NO-Ncm" customClass="ViewController" customModule="BLEMiblueTooth" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2L-5V-upf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z9h-Wf-DbQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IRa-a8-cbz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注意：请保持所要连接的小米手环已与所有的设备断开连接" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySK-rX-Xqm">
+                                <rect key="frame" x="20" y="609" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wh0-Xn-Dfn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CQi-mf-w2L">
+                                <rect key="frame" x="178" y="74" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-LB-4Dz">
+                                <rect key="frame" x="40" y="109" width="295" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.46581011550000001" blue="0.5063779813" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="d50-mB-htW"/>
+                                </constraints>
+                                <state key="normal" title="连接小米手环">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectAction:" destination="HZI-NO-Ncm" eventType="touchUpInside" id="bAx-3O-s6Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJp-T4-kfR">
+                                <rect key="frame" x="40" y="169" width="295" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.46581011550000001" blue="0.5063779813" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="OQN-Ob-YDa"/>
+                                </constraints>
+                                <state key="normal" title="断开连接">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="disConnectAction:" destination="HZI-NO-Ncm" eventType="touchUpInside" id="zav-my-B9M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6p3-Wb-VNO">
+                                <rect key="frame" x="40" y="229" width="295" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.46581011550000001" blue="0.5063779813" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="OqD-9X-hVs"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZAH-J9-OWY"/>
+                                </constraints>
+                                <state key="normal" title="震动">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZAH-J9-OWY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="shakeBankAction:" destination="HZI-NO-Ncm" eventType="touchUpInside" id="XSU-U6-5tT"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reM-se-GEc">
+                                <rect key="frame" x="40" y="349" width="295" height="250"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnx-v5-YRJ">
+                                <rect key="frame" x="40" y="289" width="295" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.46581011550000001" blue="0.5063779813" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0L0-08-NL6"/>
+                                    <constraint firstAttribute="height" constant="45" id="C5z-fo-Lrn"/>
+                                </constraints>
+                                <state key="normal" title="停止震动">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0L0-08-NL6"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="stopShakeAction:" destination="HZI-NO-Ncm" eventType="touchUpInside" id="w7K-nS-IlK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lnx-v5-YRJ" secondAttribute="trailing" constant="40" id="4QK-m4-pa2"/>
+                            <constraint firstItem="6p3-Wb-VNO" firstAttribute="top" secondItem="hJp-T4-kfR" secondAttribute="bottom" constant="15" id="5n4-pf-QyC"/>
+                            <constraint firstItem="hJp-T4-kfR" firstAttribute="leading" secondItem="IRa-a8-cbz" secondAttribute="leading" constant="40" id="6Ua-13-wz3"/>
+                            <constraint firstItem="Lnx-v5-YRJ" firstAttribute="top" secondItem="6p3-Wb-VNO" secondAttribute="bottom" constant="15" id="6sM-U4-F4i"/>
+                            <constraint firstItem="Z9h-Wf-DbQ" firstAttribute="top" secondItem="ySK-rX-Xqm" secondAttribute="bottom" constant="8" id="ARc-Wg-1jS"/>
+                            <constraint firstItem="6p3-Wb-VNO" firstAttribute="leading" secondItem="IRa-a8-cbz" secondAttribute="leading" constant="40" id="Bly-Az-drW"/>
+                            <constraint firstAttribute="trailing" secondItem="reM-se-GEc" secondAttribute="trailing" constant="40" id="MCw-MN-Jl5"/>
+                            <constraint firstItem="CQi-mf-w2L" firstAttribute="top" secondItem="B2L-5V-upf" secondAttribute="bottom" constant="10" id="MkO-Lf-NQW"/>
+                            <constraint firstItem="Lnx-v5-YRJ" firstAttribute="top" secondItem="hJp-T4-kfR" secondAttribute="bottom" constant="15" id="Nt0-Oh-Ei6"/>
+                            <constraint firstItem="Lnx-v5-YRJ" firstAttribute="leading" secondItem="IRa-a8-cbz" secondAttribute="leading" constant="40" id="PqW-ah-LOw"/>
+                            <constraint firstItem="CQi-mf-w2L" firstAttribute="centerX" secondItem="IRa-a8-cbz" secondAttribute="centerX" id="WER-sg-1ux"/>
+                            <constraint firstItem="reM-se-GEc" firstAttribute="leading" secondItem="IRa-a8-cbz" secondAttribute="leading" constant="40" id="YF0-uS-i6y"/>
+                            <constraint firstAttribute="trailing" secondItem="dbo-LB-4Dz" secondAttribute="trailing" constant="40" id="Zb5-iB-uqx"/>
+                            <constraint firstItem="hJp-T4-kfR" firstAttribute="top" secondItem="dbo-LB-4Dz" secondAttribute="bottom" constant="15" id="aiJ-l7-GMg"/>
+                            <constraint firstItem="dbo-LB-4Dz" firstAttribute="top" secondItem="CQi-mf-w2L" secondAttribute="bottom" constant="15" id="cPF-AF-3a3"/>
+                            <constraint firstItem="ySK-rX-Xqm" firstAttribute="leading" secondItem="IRa-a8-cbz" secondAttribute="leading" constant="20" id="dt0-W7-EsK"/>
+                            <constraint firstAttribute="trailing" secondItem="6p3-Wb-VNO" secondAttribute="trailing" constant="40" id="gBF-up-Zs5"/>
+                            <constraint firstAttribute="trailing" secondItem="hJp-T4-kfR" secondAttribute="trailing" constant="40" id="hte-de-S5F"/>
+                            <constraint firstAttribute="trailing" secondItem="ySK-rX-Xqm" secondAttribute="trailing" constant="20" id="iCs-WZ-x3V"/>
+                            <constraint firstItem="reM-se-GEc" firstAttribute="top" secondItem="Lnx-v5-YRJ" secondAttribute="bottom" constant="15" id="rHi-ud-8Cm"/>
+                            <constraint firstItem="ySK-rX-Xqm" firstAttribute="top" secondItem="reM-se-GEc" secondAttribute="bottom" constant="10" id="vNh-Es-ToU"/>
+                            <constraint firstItem="dbo-LB-4Dz" firstAttribute="leading" secondItem="IRa-a8-cbz" secondAttribute="leading" constant="40" id="yqF-6Y-ojo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Nt0-Oh-Ei6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="小米手环" id="uTz-hc-V2n"/>
+                    <connections>
+                        <outlet property="ActionID" destination="CQi-mf-w2L" id="CyY-0J-IwA"/>
+                        <outlet property="ConnectBtn" destination="dbo-LB-4Dz" id="DoT-nY-iJn"/>
+                        <outlet property="ResultTextV" destination="reM-se-GEc" id="yde-w6-WC3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BO6-6Q-Dah" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="107"/>
+        </scene>
+    </scenes>
+</document>
